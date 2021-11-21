@@ -12,12 +12,13 @@ app.get("/json", (req, res) => res.json({ "message": "hello json" }))
 app.get("/json/v3", (req, res) => res.json({ "msg": "hello json" }))
 app.get("/now", (req, res, next) => {
     let now = new Date()
+    now.setSeconds(new Date().getSeconds() + 20)
 
-    req.time = now;
+    req.time now;
     next()
 },
     function (req, res) {
-        return res.send({ 'time': req.time.toString() })
+        return res.send({ 'time': req.time.toDateString() })
     }
 )
 
