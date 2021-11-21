@@ -14,7 +14,7 @@ app.get("/now", (req, res, next) => {
     let now = new Date()
     now.setSeconds(new Date().getSeconds() + 20)
 
-    req.time now;
+    req.time = now;
     next()
 },
     function (req, res) {
