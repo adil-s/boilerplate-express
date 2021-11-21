@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"engines": {
 		"node": ">=12"
+		"npm": "8.x"
 	},
 	"dependencies": {
 		"express": "^4.14.0",
