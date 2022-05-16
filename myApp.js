@@ -1,5 +1,5 @@
 var createClient = require('redis').createClient
-const client = createClient();
+const client = createClient({url: "redis://redis:6379"});
 async function redis_init() {
     client.on('error', (err) => console.log('Redis Client Error', err));
     await client.connect();
